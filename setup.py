@@ -13,7 +13,7 @@ setup(
   keywords = ['Python', 'Google Drive', 'drive', 'API', 'wrapper', 'spreadsheet', 'sheets' ],   
   install_requires=[            
           'pandas',
-          'gspread'
+          'gspread',
           'gspread-dataframe'
       ],
   classifiers=[
