@@ -1,23 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
 import gspread
 import gspread_dataframe
-
-
-# In[2]:
-
-
-# DataFrameLoader
-# drive_dataframe_uploader
-
-
-# In[42]:
-
 
 class DataFrameLoader(object):
     """ 
@@ -156,7 +142,3 @@ class DataFrameLoader(object):
 
 
 # In[ ]:
-
-
-
-
