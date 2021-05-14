@@ -14,7 +14,7 @@ setup(
   install_requires=[            
           'pandas',
           'gspread'
-          'gspread_dataframe'
+          'gspread-dataframe'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      
