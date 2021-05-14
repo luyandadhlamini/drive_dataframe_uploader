@@ -5,7 +5,7 @@ setup(
   packages = ['drive_dataframe_uploader'],   
   version = version,      
   license='MIT',        
-  description = 'Package uses a dictionary to download, append or replace Google Sheets with a pandas dataframe.',   
+  description = 'Package uses a dictionary to download, append or replace Google Spreadsheets with a pandas dataframe.',   
   author = 'Luyanda Dhlamini',                   
   author_email = 'luyanda.dhlamini@gmail.com',  
   url = 'https://github.com/luyandadhlamini',   
