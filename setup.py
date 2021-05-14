@@ -1,7 +1,5 @@
 from distutils.core import setup
-
 version = '0.1.0'
-
 setup(
   name = 'drive_dataframe_uploader',         
   packages = ['drive_dataframe_uploader'],   
@@ -15,8 +13,8 @@ setup(
   keywords = ['Python', 'Google Drive', 'drive', 'API', 'wrapper', 'spreadsheet', 'sheets' ],   
   install_requires=[            
           'pandas',
-          'gspread',
-          'gspread_dataframe',
+          'gspread'
+          'gspread_dataframe'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      
@@ -27,8 +25,9 @@ setup(
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9', ],
+    'Programming Language :: Python :: 3.9',
+  ],
     
-    long_description = 'Package uses a dictionary to download, append or replace Google Sheets with a pandas dataframe.' ,
+    long_description = 'Package uses a dictionary to download, append or replace Google Sheets with a pandas dataframe.',
     long_description_content_type = 'text/markdown'
 )
