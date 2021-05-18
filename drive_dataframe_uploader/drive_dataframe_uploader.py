@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import pandas as pd
 import gspread
 import gspread_dataframe
@@ -139,6 +136,3 @@ class DataFrameLoader(object):
             print("Process complete.")
             
         return data_dictionary
-
-
-# In[ ]:
