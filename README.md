@@ -1,5 +1,5 @@
 # drive_dataframe_uploader
- Package **downloads**, **appends** or **replaces** a Google Sheet with a pandas dataframe.
+ Package **downloads**, **appends**, **duplicates from template**, or **replaces** a Google Sheet with a pandas dataframe.
  A dictionary is used to determine the sheet(s) to work on.
 
 <details><summary><b>How To Use</b></summary>
