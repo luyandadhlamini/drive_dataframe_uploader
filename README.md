@@ -11,7 +11,7 @@
 
 2. Import the module & instantiate the GoogleDrivePython class:
     ```sh
-    import drive-dataframe-uploader as ddu
+    import drive_dataframe_uploader as ddu
     dl = ddu.DataFrameLoader()
     ```
 
@@ -23,7 +23,9 @@
 4. Create a dictionary with the Google Spreadsheet sheet name & doc key to work on:
     ```sh
     # Dictionary format: { sheet_name_string : { 'doc_key' : spread_sheet_id_string } }
-    data_dictionary = { 'Sheet1' : { 'doc_key' : '1ZqLUWuANFa8rCRF2tpIgCNl-IWsmw2MKWxPVpmfUM0s' } }
+    sheet_name = 'Sheet1'   # This is the name of the spreadsheet sheet to work on.
+    doc_key = '1ZqLUWuANFa8rCRF2tpIgCNl-IWsmw2MKWxPVpmfUM0s'    # The document id found in the spreadsheet's link.
+    data_dictionary = { sheet_name : { 'doc_key' : doc_key } }
     
     ```
  
@@ -31,21 +33,22 @@
 5. Use the get_existing() function to download the data from a Spreadsheet into a pandas DataFrame:
     ```sh
     # Create & save a text file into the local directory
-    existing_df = dl.get_existing( data_dictionary = data_dictionary, service_account_json_path = service_account)
+    existing_data_dictionary = dl.get_existing( data_dictionary = data_dictionary, service_account_json_path = service_account)
+    existing_df = existing_data_dictionary[sheet_name]['dataframe']
     print( existing_df.head() )
     
     # Change the first value of the downloaded dataframe.
     existing_df.at[ 0, existing_df.columns[0] ] = 'Changed'
     
     # Store the dictionary in the data_dictionary
-    data_dictionary['Sheet1']['dataframe'] = existing_df
+    data_dictionary[sheet_name]['dataframe'] = existing_df
     
     # Print the data_dictionary to assess if the dataframe has been stores in the data_dictionary
     print( data_dictionary )
     ```
 
 
-6. Use the update_data_overview() function to upload & overwrite the data in a Spreadsheet using the data_dictionary created above. All tabular data contained in the target sheet is deleted:
+6. Use the update_data_overwrite() function to upload & overwrite the data in a Spreadsheet using the data_dictionary created above. All tabular data contained in the target sheet is deleted:
     ```sh
     # Pass in the data_dictionary created above to overwrite data in the existing Sheet1.
     # If the passed in sheet cannot be found, a new sheet is created.

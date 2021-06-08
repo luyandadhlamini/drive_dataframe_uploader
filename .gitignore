@@ -1,5 +1,6 @@
 # Ignore mac default folders.
-.DS_Store
+**.DS_Store
+**.pyc
 
 # Excludes the distribution folder.
 dist/
